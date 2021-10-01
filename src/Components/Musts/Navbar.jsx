@@ -149,7 +149,7 @@ const Navbar = (props) => {
                 <a href="/memorandum">memorandum</a>
               </li> */}
               <li>
-                <a href="honeydefi.com">Home</a>
+                <a href="https://honeydefi.com">Home</a>
               </li>
               <li>
                 <a href="https://docs.honeydefi.com">Docs</a>

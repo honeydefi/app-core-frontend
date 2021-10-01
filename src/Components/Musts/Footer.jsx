@@ -62,7 +62,7 @@ const Footer = () => {
             </a>
             <a
               style={{ marginLeft: "5px", marginRight: "5px" }}
-              href="https://linkedin.com/company/honeydefi"
+              href="https://linkedin.com/company/honeylabsio"
             >
               Team
             </a>
