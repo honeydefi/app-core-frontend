@@ -60,6 +60,24 @@ const Footer = () => {
             >
               Docs
             </a>
+            <a
+              style={{ marginLeft: "5px", marginRight: "5px" }}
+              href="https://linkedin.com/company/honeydefi"
+            >
+              Team
+            </a>
+            <a
+              style={{ marginLeft: "5px", marginRight: "5px" }}
+              href="https://github.com/TechRate/Smart-Contract-Audits/blob/main/September/Honey.pdf"
+            >
+              Audit
+            </a>
+            <a
+              style={{ marginLeft: "5px", marginRight: "5px" }}
+              href="https://docs.honeydefi.com/general-faq"
+            >
+              FAQ
+            </a>
             {/* <a style={{ marginLeft: "5px" }} href="about">
               token
             </a> */}

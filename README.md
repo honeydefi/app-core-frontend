@@ -1,3 +1,9 @@
+# Honey DeFi front end for staking LP tokens
+
+UI forked from Blackpool*
+
+We are hiring, message contact@honeydefi.com
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
