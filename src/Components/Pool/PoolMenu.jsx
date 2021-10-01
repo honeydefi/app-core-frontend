@@ -12,10 +12,10 @@ const PoolMenu = (props) => {
   const [honeyBalance, setHoneyBalance] = useState(0);
 
   const buttons = [
-    "buy honey",
-    "honey staking",
-    "create pair",
-    "stake liquidity",
+    "Buy",
+    "Stake",
+    "Pair",
+    "Farms",
   ];
 
   const minABI = [

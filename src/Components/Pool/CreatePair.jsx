@@ -125,11 +125,11 @@ const CreatePair = (props) => {
           </div>
           <div className="pair-box">
             <div style={{ display: "flex", flexDirection: "column" }}>
-              <p>551</p>
+              <p>2294</p>
               <p>HONEY per ETH</p>
             </div>
             <div style={{ display: "flex", flexDirection: "column" }}>
-              <p>551</p>
+              <p>0.000042</p>
               <p>ETH per HONEY</p>
             </div>
             <div style={{ display: "flex", flexDirection: "column" }}>
@@ -143,7 +143,7 @@ const CreatePair = (props) => {
           </div>
           <p style={{ textAlign: "left", marginTop: 20 }}>
             Slippage Difference between the expected price and the price at
-            which the trade is executed.
+            which the trade is executed. Recomended: 13%
           </p>
           <div className="create-pair-slippage">
             {buttons.map((data, i) => {
