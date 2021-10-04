@@ -29,6 +29,14 @@
   --code-color-18: #bbbbbb;
 }
 
+.main-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100% !important;
+  min-height: 100vh !important;
+}
+
 .sides-1 {
   position: absolute;
   margin-top: -150px;
@@ -62,6 +70,7 @@ body {
   color: #000 !important;
   text-align: left;
   line-height: 1.5 !important;
+  position: relative;
 }
 
 h1,
@@ -114,17 +123,27 @@ p {
   white-space: pre-wrap;
 }
 
+.main-footer {
+  /* margin-top: 100%; */
+  /* background-color: tomato; */
+}
+
 footer {
   color: #000 !important;
   border-top: 1px solid #e67f0a !important;
   margin: 20px auto 15px;
+  /* position: fixed; */
+  /* position: absolute; */
+  right: 0;
+  left: 0;
+  padding: 1rem;
   padding-top: 10px;
-  text-align: right;
-  position: fixed;
+  /* background-color: #efefef; */
+  text-align: center;
   /* left: 0; */
   bottom: 0;
   margin-bottom: 20px;
-  width: 90%;
+  /* width: 100%; */
   max-width: 600px;
 }
 
@@ -284,7 +303,6 @@ pre {
   border: none;
   padding: 0;
   margin: 0;
-  overflow: auto;
   font-size: 12.5px;
   color: var(--text-color);
   line-height: 1.7 !important;
@@ -673,6 +691,10 @@ pre {
 }
 
 @media screen and (max-width: 1000px) {
+  body {
+    overflow-y: visible !important;
+  }
+
   .sides-1 {
     /* background-color: yellow; */
     width: 25%;
@@ -695,6 +717,10 @@ pre {
 }
 
 @media screen and (max-width: 800px) {
+  body {
+    overflow: visible !important;
+  }
+
   .sides-1 {
     display: none;
   }

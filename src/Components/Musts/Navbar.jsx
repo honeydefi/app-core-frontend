@@ -168,7 +168,7 @@ const Navbar = (props) => {
                     style={{ cursor: "pointer" }}
                     onClick={() => fetchProvider()}
                   >
-                    connect
+                    Connect
                   </span>
                 )}
               </li>

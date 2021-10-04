@@ -33,25 +33,25 @@ const PoolMenu = (props) => {
     if (props.walletAddress) {
       const walletAddress = props.walletAddress;
       const web3 = new Web3(
-          new Web3.providers.HttpProvider(
-              `https://mainnet.infura.io/v3/${process.env.REACT_APP_INFURA_ID}`
-          )
+        new Web3.providers.HttpProvider(
+          `https://mainnet.infura.io/v3/${process.env.REACT_APP_INFURA_ID}`
+        )
       );
 
       console.log("ADDRESS NI ", walletAddress);
 
       web3.eth.getBalance(
-          web3.utils.toChecksumAddress(walletAddress),
-          function (err, result) {
-            if (err) {
-              console.log(err);
-            } else {
-              console.log(web3.utils.fromWei(result, "ether") + " ETH");
-              var ethBl = web3.utils.fromWei(result, "ether").toString();
-              // ethBl = ethBl.substring(0, 6);
-              setETHBalance(ethBl);
-            }
+        web3.utils.toChecksumAddress(walletAddress),
+        function (err, result) {
+          if (err) {
+            console.log(err);
+          } else {
+            console.log(web3.utils.fromWei(result, "ether") + " ETH");
+            var ethBl = web3.utils.fromWei(result, "ether").toString();
+            // ethBl = ethBl.substring(0, 6);
+            setETHBalance(ethBl);
           }
+        }
       );
       const contract = new web3.eth.Contract(minABI, honeyAddress);
       console.log("HONEY CON ", contract);
@@ -65,56 +65,56 @@ const PoolMenu = (props) => {
   };
 
   return (
-      <>
-        <div>
-          <div className="pool-menu-main">
-            {buttons.map((data, i) => {
-              return (
-                  <p
-                      className={
-                        i === active ? "pool-menu-button-active" : "pool-menu-button"
-                      }
-                      key={i}
-                      onClick={() => {
-                        setActive(i);
-                      }}
-                  >
-                    {data}
-                  </p>
-              );
-            })}
-          </div>
+    <>
+      <div>
+        <div className="pool-menu-main">
+          {buttons.map((data, i) => {
+            return (
+              <p
+                className={
+                  i === active ? "pool-menu-button-active" : "pool-menu-button"
+                }
+                key={i}
+                onClick={() => {
+                  setActive(i);
+                }}
+              >
+                {data}
+              </p>
+            );
+          })}
+        </div>
 
-          <div className="data-to-show">
-            {props.chainChanged ? (
-                <span className="pool-menu-button-active">
+        <div className="data-to-show">
+          {props.chainChanged ? (
+            <span className="pool-menu-button-active">
               Please make sure you are on ETH Network.
             </span>
-            ) : (
-                <>
-                  {!props.connected ? (
-                      <span className="pool-menu-button-active">
+          ) : (
+            <>
+              {!props.connected ? (
+                <span className="pool-menu-button-active">
                   Wallet Not Connected.
                 </span>
-                  ) : (
-                      <>
-                        {active === 0 && (
-                            <Buy eth={ETHBalance} honey={honeyBalance} />
-                        )}
-                        {active === 1 && <Staking honey={honeyBalance} />}
-                        {active === 2 && (
-                            <CreatePair eth={ETHBalance} honey={honeyBalance} />
-                        )}
-                        {active === 3 && (
-                            <StakeLiquidity eth={ETHBalance} honey={honeyBalance} />
-                        )}
-                      </>
+              ) : (
+                <>
+                  {active === 0 && (
+                    <Buy eth={ETHBalance} honey={honeyBalance} />
+                  )}
+                  {active === 1 && <Staking honey={honeyBalance} />}
+                  {active === 2 && (
+                    <CreatePair eth={ETHBalance} honey={honeyBalance} />
+                  )}
+                  {active === 3 && (
+                    <StakeLiquidity eth={ETHBalance} honey={honeyBalance} />
                   )}
                 </>
-            )}
-          </div>
+              )}
+            </>
+          )}
         </div>
-      </>
+      </div>
+    </>
   );
 };
 
