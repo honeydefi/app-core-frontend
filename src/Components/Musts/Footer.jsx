@@ -52,6 +52,15 @@ const Footer = () => {
               >
                 <img alt="" src={`${IMAGE_URL}github.png`} width="18px" />
               </a>
+              <a
+                  style={{ paddingRight: "5px", paddingLeft: "5px" }}
+                  href="https://tomjpandolfi.medium.com"
+                  className="hover:opacity-70"
+                  target="_blank"
+                  rel="noreferrer"
+              >
+                <img alt="" src={`${IMAGE_URL}medium.png`} width="18px" />
+              </a>
             </div>
 
             <div>
